@@ -1,2 +1,6 @@
-%h1 Rooms#index
-%p Find me in app/views/rooms/index.html.erb
+.max-w-2xl.mx-auto.p-6
+  %h1.text-2xl.font-bold.mb-6 チャットルーム
+
+  .space-y-2
+    - @rooms.each do |room|
+      = link_to room.name, room_path(room), class: "block p-4 bg-white rounded-lg shadow hover:bg-gray-50 transition"
